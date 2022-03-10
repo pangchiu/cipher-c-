@@ -160,12 +160,7 @@ namespace cipher
             values.Add(0);
 
 
-            for (int i = 65; i <= 90; i++)
-            {
-                keys.Add((char)i);
-                values.Add(values[values.Count - 1] + 1);
-            }
-
+           addKeysAndValues1(keys,values);
 
             for (int i = 97; i <= 122; i++)
             {
@@ -205,6 +200,16 @@ namespace cipher
 
             return dictionary;
         }
+        
+        
+        void addKeysAndValues1(List<char> keys, List<int> values) {
+            
+             for (int i = 65; i <= 90; i++)
+            {
+                keys.Add((char)i);
+                values.Add(values[values.Count - 1] + 1);
+            }
+        }
 
 
          Dictionary<int, char> creatCharCodeByInt()
@@ -216,12 +221,7 @@ namespace cipher
             values.Add(0);
 
 
-            for (int i = 65; i <= 90; i++)
-            {
-                keys.Add((char)i);
-                values.Add(values[values.Count - 1] + 1);
-            }
-
+            addKeysAndValues1(keys,values);
 
             for (int i = 97; i <= 122; i++)
             {
@@ -263,5 +263,7 @@ namespace cipher
         }
 
     }
+    
+    
 
 }
